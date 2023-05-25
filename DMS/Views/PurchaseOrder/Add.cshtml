@@ -1,0 +1,51 @@
+﻿@model DMS.Models.ViewModels.PurchaseOrderViewModel;
+
+<h1 style="font-family: Garamond;">
+    Add
+</h1>
+<form method="post" action="Add">
+    <div class="form-group">
+        <label for="UserId">User Id:</label>
+        <input type="text" class="form-control" id="UserId" asp-for="UserId" required>
+        <div class="invalid-feedback">
+            Please enter a valid User Id.
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="VendorId">Vendor Id:</label>
+        <input type="text" class="form-control" id="VendorId" asp-for="VendorId" required>
+        <div class="invalid-feedback">
+            Please enter a valid Vendor Id.
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="Description">Description:</label>
+        <input type="text" class="form-control" id="Description" asp-for="Description" required>
+        <div class="invalid-feedback">
+            Please enter a Description.
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="EntryDate">Entry Date:</label>
+        <input type="date" class="form-control" id="EntryDate" asp-for="EntryDate" required>
+        <div class="invalid-feedback">
+            Please enter a valid Entry Date.
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="OrderDate">Order Date:</label>
+        <input type="date" class="form-control" id="OrderDate" asp-for="OrderDate" required>
+        <div class="invalid-feedback">
+            Please enter a valid Order Date.
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="TotalPrice">Total Price:</label>
+        <input type="text" class="form-control" id="TotalPrice" asp-for="TotalPrice" required>
+        <div class="invalid-feedback">
+            Please enter a Total Price.
+        </div>
+    </div>
+    <button style="background-color:orangered" type="submit" class="btn btn-primary mt-2">Create</button>
+</form>
+

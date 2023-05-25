@@ -1,0 +1,69 @@
+﻿@model List<DMS.Models.DomainModels.Customer>
+
+<h1 style="font-family: Garamond;">Customers</h1>
+
+<div class="container"> 
+    <a class="btn btn-primary" asp-controller="Customer" asp-action="Add"
+             style="background-color:darkcyan">Add Customer</a>
+    <table class="table table-striped table-hover"> 
+        <thead> 
+            <tr> 
+                <th class="bg-primary text-white">Name</th>
+                <th class="bg-primary text-white">Email</th>
+                <th class="bg-primary text-white">Phone</th>
+                <th class="bg-primary text-white">Address</th>
+                <th class="bg-primary text-white">CustomerCategory</th>
+                <th class="bg-primary text-white">NTN</th>
+               @* <th class="bg-primary text-white">CompNo</th>
+*@            </tr> 
+        </thead> 
+        <tbody> 
+            @foreach (var customer in Model)
+            {
+             <tr>
+                 <td>@customer.Name</td>
+                 <td>@customer.Email</td>
+                 <td>@customer.Phone</td>
+                 <td>@customer.Address</td>
+                 <td>@customer.CustomerCategory</td>
+                 <td>@customer.NTN</td>
+                @* <td>@customer.CompNo</td>*@
+                 <td><a href="Customer/Edit/@customer.Id">Edit</a></td>
+             </tr>    
+            }
+        </tbody> 
+    </table>
+</div>
+<style>
+    th {
+        font-weight: bold;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    td {
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .table tbody tr:hover {
+        background-color: #f2f2f2;
+    }
+</style>
+
+<style>
+    th {
+        font-weight: bold;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    td {
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .table tbody tr:hover {
+        background-color: #f2f2f2;
+    }
+</style>

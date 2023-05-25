@@ -1,0 +1,65 @@
+﻿@model List<DMS.Models.DomainModels.Booker>
+
+
+<div class="container">
+    <a class="btn btn-primary" asp-controller="Booker" asp-action="Add"
+       style="background-color:orange">Add Booker</a>
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th class="bg-primary text-white">Name</th>
+                <th class="bg-primary text-white">Email</th>
+                <th class="bg-primary text-white">Phone</th>
+                <th class="bg-primary text-white">Address</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var booker in Model)
+            {
+                <tr>
+                    <td>@booker.Name</td>
+                    <td>@booker.Phone</td>
+                    <td>@booker.Address</td>
+                    <td>@booker.CNIC</td>
+                    <td>@booker.Area</td>
+                    <td>@booker.JoinDate</td>
+                    <td>@booker.LeaveDate</td>
+                    <td><a href="Booker/Edit/@booker.BookerId">Edit</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<style>
+    th {
+        font-weight: bold;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    td {
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .table tbody tr:hover {
+        background-color: #f2f2f2;
+    }
+</style>
+
+<style>
+    th {
+        font-weight: bold;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    td {
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .table tbody tr:hover {
+        background-color: #f2f2f2;
+    }
+</style>

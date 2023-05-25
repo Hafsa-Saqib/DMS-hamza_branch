@@ -1,0 +1,66 @@
+﻿@model List<DMS.Models.DomainModels.CustomerCategory>
+
+
+<div class="container">
+    <a class="btn btn-primary" asp-controller="CustomerCategory" asp-action="Add"
+       style="background-color:darkcyan">Add</a>
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th class="bg-primary text-white">ID</th>
+                <th class="bg-primary text-white">Name</th>
+                <th class="bg-primary text-white">Description</th>
+                <th class="bg-primary text-white">CategoryId</th>
+                <th class="bg-primary text-white">ReceivableAccountId</th>
+                <th class="bg-primary text-white">RevenueaccountId</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var CC in Model)
+            {
+                <tr>
+                    <td>@CC.Id</td>
+                    <td>@CC.Name</td>
+                    <td>@CC.Description</td>
+                    <td>@CC.CategoryId</td>
+                    <td>@CC.ReceivableAccountId</td>
+                    <td>@CC.RevenueaccountId</td>
+                    <td><a href="CustomerCategory/Edit/@CC.Id">Edit</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<style>
+    th {
+        font-weight: bold;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    td {
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .table tbody tr:hover {
+        background-color: #f2f2f2;
+    }
+</style>
+
+<style>
+    th {
+        font-weight: bold;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    td {
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .table tbody tr:hover {
+        background-color: #f2f2f2;
+    }
+</style>

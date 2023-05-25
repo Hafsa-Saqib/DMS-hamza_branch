@@ -1,0 +1,68 @@
+﻿@model List<DMS.Models.DomainModels.PurchaseReturn>
+
+
+<div class="container">
+    <a class="btn btn-primary" asp-controller="PurchaseReturn" asp-action="Add"
+       style="background-color:darkcyan">Add</a>
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th class="bg-primary text-white">Id</th>
+                <th class="bg-primary text-white">VendorId</th>
+                <th class="bg-primary text-white">Reason</th>
+                <th class="bg-primary text-white">EntryDate</th>
+                <th class="bg-primary text-white">Date</th>
+                <th class="bg-primary text-white">WarehouseId</th>
+                <th class="bg-primary text-white">UserId</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var PR in Model)
+            {
+                <tr>
+                    <td>@PR.Id</td>
+                    <td>@PR.VendorId</td>
+                    <td>@PR.Reason</td>
+                    <td>@PR.EntryDate</td>
+                    <td>@PR.Date</td>
+                    <td>@PR.WarehouseId</td>
+                    <td>@PR.UserId</td>
+                    <td><a href="PurchaseReturn/Edit/@PR.Id">Edit</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<style>
+    th {
+        font-weight: bold;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    td {
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .table tbody tr:hover {
+        background-color: #f2f2f2;
+    }
+</style>
+
+<style>
+    th {
+        font-weight: bold;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    td {
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .table tbody tr:hover {
+        background-color: #f2f2f2;
+    }
+</style>

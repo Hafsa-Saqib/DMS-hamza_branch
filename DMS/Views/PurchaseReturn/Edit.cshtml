@@ -1,0 +1,60 @@
+﻿@model DMS.Models.ViewModels.PurchaseReturnViewModel
+
+<h1 style="font-family: Garamond;">
+    Edit 
+</h1>
+<form method="post" action="Edit">
+    <div class="form-group">
+        <input type="hidden" class="form-control" id="Id" asp-for="Id" required>
+        <input type="hidden" class="form-control" id="Active" asp-for="IsActive" required>
+        <label for="Id">ID:</label>
+        <input type="text" class="form-control" id="Id" asp-for="Id" required>
+        <div class="invalid-feedback">
+            Please enter a valid ID.
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="VendorId">VendorId:</label>
+        <input type="text" class="form-control" id="VendorId" asp-for="VendorId" required>
+        <div class="invalid-feedback">
+            Please enter a valid Vendor ID.
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="Reason">Reason:</label>
+        <input type="text" class="form-control" id="Reason" asp-for="Reason" required>
+        <div class="invalid-feedback">
+            Please enter a valid Reason.
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="EntryDate">Entry Date:</label>
+        <input type="date" class="form-control" id="EntryDate" asp-for="EntryDate" required>
+        <div class="invalid-feedback">
+            Please enter a valid Entry Date.
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="Date">Date:</label>
+        <input type="date" class="form-control" id="Date" asp-for="Date" required>
+        <div class="invalid-feedback">
+            Please enter a valid Date.
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="WarehouseId">WarehouseId:</label>
+        <input type="text" class="form-control" id="WarehouseId" asp-for="WarehouseId" required>
+        <div class="invalid-feedback">
+            Please enter a valid WarehouseId.
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="UserId">UserId:</label>
+        <input type="text" class="form-control" id="UserId" asp-for="UserId" required>
+        <div class="invalid-feedback">
+            Please enter a valid User Id.
+        </div>
+    </div>
+    <button style="background-color:orangered" type="submit" class="btn btn-primary mt-2">Update</button>
+    <button type="submit" class="btn btn-danger mt-2" asp-action="Delete" asp-controller="Purchase Return">Delete</button>
+</form>

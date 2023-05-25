@@ -1,0 +1,65 @@
+﻿@model List<DMS.Models.DomainModels.PurchaseCategory>
+
+
+<div class="container">
+    <a class="btn btn-primary" asp-controller="PurchaseCategory" asp-action="Add"
+       style="background-color:orange">Add Category</a>
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th class="bg-primary text-white">CategoryId</th>
+                <th class="bg-primary text-white">Name</th>
+                <th class="bg-primary text-white">Desc</th>
+                <th class="bg-primary text-white">PayableAccount</th>
+                <th class="bg-primary text-white">GRIRAccount</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var vendor in Model)
+            {
+                <tr>
+                    <td>@vendor.CategoryID</td>
+                    <td>@vendor.Name</td>
+                    <td>@vendor.Desc</td>
+                    <td>@vendor.PayableAccount</td>
+                    <td>@vendor.GRIRAccount</td>
+                    <td><a href="PurchaseCategory/Edit/@vendor.Id">Edit</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<style>
+    th {
+        font-weight: bold;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    td {
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .table tbody tr:hover {
+        background-color: #f2f2f2;
+    }
+</style>
+
+<style>
+    th {
+        font-weight: bold;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    td {
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .table tbody tr:hover {
+        background-color: #f2f2f2;
+    }
+</style>
+

@@ -1,0 +1,74 @@
+﻿@model DMS.Models.ViewModels.GoodsdeliveryViewModel
+
+<h1 style="font-family: Garamond;">
+    Edit Delivery
+</h1>
+<form method="post" action="Edit">
+    <div class="form-group">
+        <input type="hidden" class="form-control" id="Id" asp-for="Id" required>
+        <input type="hidden" class="form-control" id="Active" asp-for="IsActive" required>
+        <label for="Id">Id:</label>
+        <input type="text" class="form-control" id="Id" asp-for="Id" required>
+        <div class="invalid-feedback">
+            Please enter a valid name.
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="SalesOrderId">SalesOrderId:</label>
+        <input type="text" class="form-control" id="SalesOrderId" asp-for="SalesOrderId" required>
+        <div class="invalid-feedback">
+            Please enter a valid Sales Order ID.
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="UserId">User Id:</label>
+        <input type="text" class="form-control" id="UserId" asp-for="UserId" required>
+        <div class="invalid-feedback">
+            Please enter a valid User Id.
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="SalesManID">Sales Man ID:</label>
+        <input type="text" class="form-control" id="SalesManID" asp-for="SalesManID" required>
+        <div class="invalid-feedback">
+            Please enter a Valid Sales Man ID.
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="WarehouseId">Warehouse ID:</label>
+        <input type="text" class="form-control" id="WarehouseId" asp-for="WarehouseId" required>
+        <div class="invalid-feedback">
+            Please enter a Valid Warehouse Id.
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="Description">Description:</label>
+        <input type="text" class="form-control" id="Description" asp-for="Description" required>
+        <div class="invalid-feedback">
+            Please enter a Description.
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="DevliveryDate">Delivery Date:</label>
+        <input type="text" class="form-control" id="DeliveryDate" asp-for="DeliveryDate" required>
+        <div class="invalid-feedback">
+            Please enter a Delivery Date.
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="EntryDate">Entry Date:</label>
+        <input type="text" class="form-control" id="EntryDate" asp-for="EntryDate" required>
+        <div class="invalid-feedback">
+            Please enter a Entry Date.
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="IsPosted">Is Posted:</label>
+        <input type="text" class="form-control" id="IsPosted" asp-for="IsPosted" required>
+        <div class="invalid-feedback">
+            Please enter a Is Posted.
+        </div>
+    </div>
+    <button style="background-color:ButtonFace" type="submit" class="btn btn-primary mt-2">Update</button>
+    <button type="submit" class="btn btn-danger mt-2" asp-action="Delete" asp-controller="Customer">Delete</button>
+</form>

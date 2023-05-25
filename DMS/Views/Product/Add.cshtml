@@ -1,0 +1,120 @@
+﻿@model DMS.Models.ViewModels.ProductViewModel;
+
+<h1 style="font-family: Garamond;">
+    Add Product
+</h1>
+<form method="post" action="Add">
+    <div class="form-group">
+        <label for="CompanyID">CompanyID:</label>
+        <input type="text" class="form-control" id="CompanyID" asp-for="CompanyID" required>
+        <div class="invalid-feedback">
+            Please enter a valid CompanyID.
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="ProductID">ProductID:</label>
+        <input type="email" class="form-control" id="ProductID" asp-for="ProductID" required>
+        <div class="invalid-feedback">
+            Please enter a valid ProductID.
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="ProductName">ProductName:</label>
+        <input type="tel" class="form-control" id="ProductName" asp-for="ProductName" required>
+        <div class="invalid-feedback">
+            Please enter a valid Product Name.
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="ProductType">ProductType:</label>
+        <input type="text" class="form-control" id="ProductType" asp-for="ProductType" required>
+        <div class="invalid-feedback">
+            Please enter a Product Type.
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="ProductCategory">ProductCategory:</label>
+        <input type="text" class="form-control" id="ProductCategory" asp-for="ProductCategory" required>
+        <div class="invalid-feedback">
+            Please enter a Product Category.
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="PurchaseRate">PurchaseRate:</label>
+        <input type="text" class="form-control" id="PurchaseRate" asp-for="PurchaseRate" required>
+        <div class="invalid-feedback">
+            Please enter a Purchase Rate.
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="SalesRate">SalesRate:</label>
+        <input type="text" class="form-control" id="SalesRate" asp-for="SalesRate" required>
+        <div class="invalid-feedback">
+            Please enter a Sales Rate.
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="OnHandQty">OnHandQty:</label>
+        <input type="text" class="form-control" id="OnHandQty" asp-for="OnHandQty" required>
+        <div class="invalid-feedback">
+            Please enter a On Hand Quantity.
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="StockInDate">StockInDate:</label>
+        <input type="text" class="form-control" id="StockInDate" asp-for="StockInDate" required>
+        <div class="invalid-feedback">
+            Please enter a Stock In Date.
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="SKU">SKU:</label>
+        <input type="text" class="form-control" id="SKU" asp-for="SKU" required>
+        <div class="invalid-feedback">
+            Please enter a Stock Keeping Unit.
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="Unit">Unit:</label>
+        <input type="text" class="form-control" id="Unit" asp-for="Unit" required>
+        <div class="invalid-feedback">
+            Please enter a Unit.
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="TradeOffer">TradeOffer:</label>
+        <input type="text" class="form-control" id="TradeOffer" asp-for="TradeOffer" required>
+        <div class="invalid-feedback">
+            Please enter a Trade Offer.
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="WarehouseId">WarehouseId:</label>
+        <input type="text" class="form-control" id="WarehouseId" asp-for="WarehouseId" required>
+        <div class="invalid-feedback">
+            Please enter a WarehouseId.
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="Quantity">Quantity:</label>
+        <input type="text" class="form-control" id="Quantity" asp-for="Quantity" required>
+        <div class="invalid-feedback">
+            Please enter a Quantity.
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="RefDoc">RefDoc:</label>
+        <input type="text" class="form-control" id="RefDoc" asp-for="RefDoc" required>
+        <div class="invalid-feedback">
+            Please enter a Reference Document.
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="DocType">DocType:</label>
+        <input type="text" class="form-control" id="DocType" asp-for="DocType" required>
+        <div class="invalid-feedback">
+            Please enter a Document Type.
+        </div>
+    </div>
+    <button style="background-color:orangered" type="submit" class="btn btn-primary mt-2">Create</button>
+</form>

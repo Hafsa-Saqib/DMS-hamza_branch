@@ -1,0 +1,71 @@
+﻿@model DMS.Models.ViewModels.GoodsdeliveryViewModel;
+
+<h1 style="font-family: Garamond;">
+    Add Product
+</h1>
+<form method="post" action="Add">
+    <div class="form-group">
+        <label for="Id">Id:</label>
+        <input type="text" class="form-control" id="Id" asp-for="Id" required>
+        <div class="invalid-feedback">
+            Please enter a valid ID.
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="SalesOrderId">Sales Order Id:</label>
+        <input type="text" class="form-control" id="SalesOrderId" asp-for="SalesOrderId" required>
+        <div class="invalid-feedback">
+            Please enter a valid Sales Order Id.
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="UserId">User Id:</label>
+        <input type="text" class="form-control" id="UserId" asp-for="UserId" required>
+        <div class="invalid-feedback">
+            Please enter a valid User Id.
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="SalesManID">Sales Man ID:</label>
+        <input type="text" class="form-control" id="SalesManID" asp-for="SalesManID" required>
+        <div class="invalid-feedback">
+            Please enter a Valid Sales Man ID.
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="WarehouseId">Warehouse ID:</label>
+        <input type="text" class="form-control" id="WarehouseId" asp-for="WarehouseId" required>
+        <div class="invalid-feedback">
+            Please enter a Valid Warehouse Id.
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="Description">Description:</label>
+        <input type="text" class="form-control" id="Description" asp-for="Description" required>
+        <div class="invalid-feedback">
+            Please enter a Description.
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="DevliveryDate">Delivery Date:</label>
+        <input type="date" class="form-control" id="DeliveryDate" asp-for="DeliveryDate" required>
+        <div class="invalid-feedback">
+            Please enter a Delivery Date.
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="EntryDate">Entry Date:</label>
+        <input type="date" class="form-control" id="EntryDate" asp-for="EntryDate" required>
+        <div class="invalid-feedback">
+            Please enter a Entry Date.
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="IsPosted">Is Posted:</label>
+        <input type="text" class="form-control" id="IsPosted" asp-for="IsPosted" required>
+        <div class="invalid-feedback">
+            Please enter a Is Posted.
+        </div>
+    </div>
+        <button style="background-color:orangered" type="submit" class="btn btn-primary mt-2">Create</button>
+</form>
